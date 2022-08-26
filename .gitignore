@@ -16,3 +16,7 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# Helm-related stuff
+/charts/*/package/
+/charts/*/crds/
