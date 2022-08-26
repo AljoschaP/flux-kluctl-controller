@@ -179,3 +179,8 @@ fuzz-smoketest: fuzz-build
 		-v "$(shell pwd)/tests/fuzz/oss_fuzz_run.sh":/runner.sh \
 		local-fuzzing:latest \
 		bash -c "/runner.sh"
+
+# Helm chart
+copy-crds:
+	mkdir -p charts/flux-kluctl-controller/crds
+	cp -R config/crd/bases/* charts/flux-kluctl-controller/crds
